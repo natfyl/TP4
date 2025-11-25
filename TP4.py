@@ -128,3 +128,27 @@ def verificationDate():
 
 #verificationDate()
 
+# Exercice N°6
+
+def tri_selection():
+    tab = [5, 2, 4, 8, 1, 3]   # la liste donnée dans l'énoncé
+
+    print("Phase 0 :", tab)
+
+    n = len(tab)
+    for i in range(n-1):
+        min_index = i
+
+        # Chercher le plus petit élément dans le reste du tableau
+        for j in range(i+1, n):
+            if tab[j] < tab[min_index]:
+                min_index = j
+
+        # On permute si un plus petit élément a été trouvé
+        if min_index != i:
+            tab[i], tab[min_index] = tab[min_index], tab[i]
+
+        print(f"Phase {i+1} :", tab)
+
+
+tri_selection()
