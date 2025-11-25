@@ -151,4 +151,4 @@ def tri_selection():
         print(f"Phase {i+1} :", tab)
 
 
-tri_selection()
+#tri_selection()
